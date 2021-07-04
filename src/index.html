@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>    
+</head>
+<body>
+    <div class="row"> 
+        <!-- Primera seccion -->
+        <div class="col-12 col-sm-12 col-md-4 col-lg-4  py-5 bg-wheater-one">
+            <div class="container">
+                <div class="row d-flex justify-content-between ">
+                    <div class="col-10  col-sm-10 col-md-10 ">
+                        <button class="btn btn-primary btn-search" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Buscar por ciudad</button>
+                        <div class="offcanvas offcanvas-start container pt-2" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+                            id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                            <button type="button" class="btn-close btn-close-white  btn-close-offcanvas text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            <div class="offcanvas-header pt-5">
+                                <form class="d-flex justify-content-center align-items-center">
+                                    <input id="input-search" class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                                    <button class="btn btn-search" type="submit" id="changue-city">Buscar</button>
+                                </form>                            
+                            </div>                            
+                        </div>
+                    </div>
+                   
+                </div>
+            </div>    
+            <div class="row">         
+                <div class="col-12  col-sm-12 col-md-12 bg-cloud ">
+                    <div class="container">
+                        <div id="current-img" class="container-father-img-wheater d-flex justify-content-center align-items-center">
+                            <div class="container-son-img-wheater">
+                                <!-- IMG CURRENT WEATHER -->
+                            </div>
+                        </div>
+                    </div>
+                </div>       
+            </div> 
+            <div class="row">
+                <div class="col-12 d-flex justify-content-center align-items-baseline" style="height: 250px;">
+                    <p id="weather-today" style="font-size: 150px;">15<p class="fw-normal text-secondary" style="font-size: 50px;">°C</p></p> <!-- alt + 0176 = comando para hacer los grados -->               
+                </div>
+            </div> 
+            <div class="row">
+                <div class="col-12  d-flex justify-content-center align-items-center text-section-one" >
+                    <span id="des-today" style="font-size:30px;">Shower</span> 
+                </div>
+            </div> 
+            <div class="row">
+                <div class="col-12 py-2 d-flex justify-content-center align-items-center text-section-one" >
+                    <span id="date-today">Today . Fri 5 Jun</span> 
+                </div>
+            </div> 
+            <div class="row">
+                <div class="col-12 py-3 d-flex justify-content-center align-items-center text-section-one" >
+                    <span id="country"></span> 
+                </div>
+            </div>  
+        </div>
+        <!-- Segunda seccion  -->
+        <div class="col-12 col-sm-12 col-md-8 col-lg-8  bg-wheater-two">
+            <div class="container p-5 text-dark ">  
+                <!-- Botones para eleccion de grados C o F -->          
+                <div class="row d-flex justify-content-center">
+                    
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-10  d-flex justify-content-center align-items-center header-section-two gx-5">
+                        <h4 class="title-to-minicards">Proximos 7 dias</h4> 
+                        <div class="d-flex justify-content-end container-buttons-temp">
+                            <!-- <button class="btn-c">°C</button>
+                            <button class="btn-f">°F</button> -->
+                        </div>        
+                    </div>
+                </div>
+                <!-- Inicio de la mini card -->
+                <div class="row gx-5 gy-2 d-flex justify-content-center">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-10 d-flex justify-content-center">
+                        <div class="row gx-5 gy-4 text-center d-flex justify-content-center" id="mini-card">
+                            <!-- MINI CARDS -->                                                               
+                        </div>
+                    </div>
+                </div>
+                <!-- Fin de las mini card -->
+                <!-- Inicio de las card grandes -->
+                <div class="row g-5 text-center d-flex justify-content-center" >
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-10  d-flex justify-content-start pt-5 pb-3" >                
+                        <h4 class="title-section-two">Los datos de hoy</h4>              
+                    </div>
+                </div>
+                <div class="row g-5 text-center d-flex justify-content-center">
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-5 d-flex justify-content-center " >               
+                        <div class="container-card-lg-one  py-3">                         
+                                <span class="card-title ">Estado del viento</span>
+                                <div class="container-card-lg-two d-flex justify-content-center align-items-center text-center">                                    
+                                    <span id="wind" class="number-data-cards">7</span><span class="literal-data-number">mph</span>                                   
+                                </div>                                                                                 
+                        </div>        
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-5  d-flex justify-content-center " >               
+                        <div class="container-card-lg-one py-3 ">                         
+                                <span class="card-title">Humedad</span>
+                                <div class="container-card-lg-two d-flex justify-content-center align-items-center text-center">                                
+                                        <span id="humidity" class="number-data-cards">84</span><span class="literal-data-number">%</span>                            
+                                </div>    
+                                                
+                        </div>        
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-5  d-flex justify-content-center">               
+                        <div class="container-card-md-one pt-4">                              
+                                <span class="card-title">Visibilidad</span>
+                                <div class="container-card-md-two d-flex justify-content-center align-items-center text-center">                                   
+                                        <span id="visibility" class="number-data-cards">6,4</span><span class="literal-data-number">miles</span>                                    
+                                </div>                                                  
+                        </div>        
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-5  d-flex justify-content-center " >               
+                        <div class="container-card-md-one pt-4">                           
+                                <span class="card-title">Presion del aire</span>
+                                <div class="container-card-md-two d-flex justify-content-center align-items-center text-center">                                    
+                                    <span id="air" class="number-data-cards">998</span><span class="literal-data-number">mb</span>                                    
+                                </div>                                        
+                        </div>        
+                    </div>               
+                </div>
+                <!-- Fin de las card grandes -->
+                <div class="row g-5 d-flex justify-content-center ">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 col-xxl-10 d-flex justify-content-center align-items-end createby pt-5" >                
+                        <p>creado por <a href="mailto:diolealc@gmail.com">dio</a></p>               
+                    </div>
+                </div>
+            </div>
+        </div>    
+    </div>   
+</body>
+</html>
